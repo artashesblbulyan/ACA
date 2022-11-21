@@ -1,0 +1,29 @@
+// includes()
+// 47. * Create a custom Array.prototype.myIncludes should work
+// similarly to Array.prototype.includes
+
+Array.prototype.myIncludes = function(elem,inx){
+    let index
+    if(inx >= 0){
+        index = inx
+    }
+    else{
+        index = this.length + inx
+    }
+    for (let i = 0; i < this.length; i++) {
+        if(index > 0){
+            if(this[index] === elem){
+                return true
+            }
+        }
+        else{
+            if(this[i] === elem){
+                return true
+            }
+        }
+    }
+    return false
+}
+
+
+console.log([1, 2, 3].myIncludes(3,7))
