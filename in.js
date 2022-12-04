@@ -442,45 +442,62 @@ function n(a,b) {
 
 // console.log(14/2)
 
-var twoSum = function(nums, target) {
-    const ountpyt =[]
-    nums.forEach((value,index)=>{
+// var twoSum = function(nums, target) {
+//     const ountpyt =[]
+//     nums.forEach((value,index)=>{
      
-        if(nums.indexOf(target-value) !== -1 && nums.indexOf(target-value) !== index ){
-            console.log(ountpyt.length)
-            if(ountpyt.length === 0){
-            ountpyt.push(nums.indexOf(target-value),index)
+//         if(nums.indexOf(target-value) !== -1 && nums.indexOf(target-value) !== index ){
+//             console.log(ountpyt.length)
+//             if(ountpyt.length === 0){
+//             ountpyt.push(nums.indexOf(target-value),index)
         
-            }
-        }
+//             }
+//         }
         
-    })
-    return ountpyt
-};
+//     })
+//     return ountpyt
+// };
 
-console.log(twoSum([3,2,4],6))
+// console.log(twoSum([3,2,4],6))
 
 
 
-var addTwoNumbers = function(l1, l2) {
-    let number1 = ''
-    let number2 = ''
-    let lengthFor = 0
-    if(l1.length > l2.length)lengthFor = l1.length
-    else lengthFor = l2.length
-    for(let i = 0 ; i<=lengthFor; i++){
-        if(l1[i] !== undefined){
-        number1 += l1[i]
-        }
-        if(l1[i] !== undefined){
-        number2 += l2[i]
-        }
-    }
+// var addTwoNumbers = function(l1, l2) {
+//     let number1 = ''
+//     let number2 = ''
+//     let lengthFor = 0
+//     if(l1.length > l2.length)lengthFor = l1.length
+//     else lengthFor = l2.length
+//     for(let i = 0 ; i<=lengthFor; i++){
+//         if(l1[i] !== undefined){
+//         number1 += l1[i]
+//         }
+//         if(l1[i] !== undefined){
+//         number2 += l2[i]
+//         }
+//     }
    
-    let k = +number1+ +number2
+//     let k = +number1+ +number2
     
-   return  Array.from(`${k}`)
-};
+//    return  Array.from(`${k}`)
+// };
 
 
-console.log(addTwoNumbers([2,4,3],[5,6,4]))
+// console.log(addTwoNumbers([2,4,3],[5,6,4]))
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function to check even numbers
+function checkEven(number) {
+  if (number % 2 == 0)
+    return true;
+  else
+    return false;
+}
+
+// create a new array by filter even numbers from the numbers array
+let evenNumbers = numbers.filter(checkEven);
+console.log(evenNumbers);
+
+// Output: [ 2, 4, 6, 8, 10 ]
