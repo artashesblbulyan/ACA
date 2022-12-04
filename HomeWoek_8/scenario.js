@@ -1,6 +1,4 @@
-'use strict';
 const URL_JSON = "./src/index.json"
-
 
 function getJson() {
    return fetch(URL_JSON).then(response => {
@@ -10,8 +8,8 @@ function getJson() {
 }
 
 const form = document.getElementById("form");
-
 const lu = document.querySelector('ul')
+
 function addHtml(el='') {
     lu.innerText = ""
     let number =0
@@ -65,39 +63,10 @@ function addHtml(el='') {
 
 
 addHtml()
-const select = document.getElementById('name')
-// select.addEventListener('change', (event) => {
-// const numberbutton = document.getElementById("numberbutton")
-//     if(event.target.value ==='max_items_to_show'){
-//         const input = document.createElement('input')
-//         input.type = "number";
-//         input.name = 'value'
-//         input.className = 'form-control'
-//         numberbutton.appendChild(input)
-//     }
-    
-    // else if(event.target.value ==='show_only_active' || 'show_description'){
-    //     const input = document.createElement('input')
-    //     const input_false = document.createElement('input')
-    //     input_false.type = "checkbox";
-    //     input_false.name = 'value'
-    //     input_false.value = false
-    //     input.type = "checkbox";
-    //     input.name = 'value'
-    //     input.value = true
-    //     form.appendChild(input)
-    //     form.appendChild(input_false)
-
-    // }
-    
-    
-//   })
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const tegForm = Object.fromEntries(new FormData(e.target))
-  console.log(tegForm)
-//   numberbutton.innerHTML = ""
   let result = true
         if(tegForm.show_only_active === 'false'   ){
             tegForm.show_only_active = false  }
@@ -110,10 +79,6 @@ form.addEventListener("submit", (e) => {
         if(tegForm.show_description === 'true'){
             tegForm.show_description = true
         }
-       
-    
-   
     console.log(tegForm)
-    
   addHtml(tegForm)
 });
