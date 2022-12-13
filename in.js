@@ -416,9 +416,9 @@
 // }
 
 // console.log( a(null))
-function n(a,b) {
-    return (a+b)
-}
+// function n(a,b) {
+//     return (a+b)
+// }
 
 
 // function fu(params) {
@@ -486,18 +486,134 @@ function n(a,b) {
 // console.log(addTwoNumbers([2,4,3],[5,6,4]))
 
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// function to check even numbers
-function checkEven(number) {
-  if (number % 2 == 0)
-    return true;
-  else
-    return false;
-}
+// // function to check even numbers
+// function checkEven(number) {
+//   if (number % 2 == 0)
+//     return true;
+//   else
+//     return false;
+// }
 
-// create a new array by filter even numbers from the numbers array
-let evenNumbers = numbers.filter(checkEven);
-console.log(evenNumbers);
+// // create a new array by filter even numbers from the numbers array
+// let evenNumbers = numbers.filter(checkEven);
+// console.log(evenNumbers);
 
 // Output: [ 2, 4, 6, 8, 10 ]
+
+
+
+// const mySearch = (arr,value) => {
+//   let index = Math.floor(arr.lenght / 2)
+//   // console.log(Math.round(index))
+//   if(arr[index]<value){
+//     index = index*2
+//     return mySearch(arr,value)
+//   }
+//   else if(arr[index]<value){
+//     index = index/2
+//     return mySearch(arr,value)
+//   }
+//   else{
+//     return arr[index]
+//   }
+// }
+
+// console.log(mySearch([1,2,3,4,5,6,7],6))
+
+
+
+
+
+// class Queue{
+//   storage=[]
+//   enqueue(value){
+//     this.storage.unshift(value)
+//   }
+//   dequeue(){
+//     return this.storage.pop()
+//   }
+//   isEmpty(){
+//     return this.storage.length
+//   }
+//   peek(){
+//     return this.storage[this.storage.length-1]
+//   }
+// }
+
+// class Steck{
+//   storage=[]
+//   push(value){
+//     this.storage.push(value)
+//   }
+//   pop(){
+//     return this.storage.pop()
+//   }
+//   isEmpty(){
+//     return this.storage.length
+//   }
+//   peek(){
+//     return this.storage[this.storage.length-1]
+//   }
+// }
+
+// let steck = new Steck()
+
+// function foo(value) {
+//   for (let i of value){
+//   let index = value.indexOf(i)
+//     if(index % 2 === 0) {
+//       steck.push(index + 1)
+//     } else {
+//       if(steck.pop() !== index) {
+//         return false;
+//       }
+//   }
+// }
+// return steck.isEmpty() === 0
+// }
+
+
+
+// console.log(foo('{]'))
+// console.log(foo('{}'))
+// console.log(foo('{{}(){}{'))
+// console.log(foo('{}([{}]){}'))
+// console.log(foo('{}([{}])[({}'))
+
+
+// var longestPalindrome = function(s) {
+//     let output = ""
+//     let max = ""
+//     for(let i = 0; i < s.length ; i++){
+
+//         if(s.indexOf(s[i]) !== s.lastIndexOf(s[i])){
+//             if(s.indexOf(s[i])+2 === s.lastIndexOf(s[i])){
+//               console.log(s[i]);
+//               output += s[i]
+//               output += s[i+1]
+//               output += s[i+2]
+              
+//               if(max.length < output.length){
+//                 max = output
+//             }
+//             output = ""
+//             }
+//             else{
+//               output += s[i]
+//             }
+//         }
+//         else{
+//             output = ""
+
+//         }
+        
+//     }
+//     return max
+// };
+
+// console.log(longestPalindrome('babasddsa'),'sss')
+str = "" + 10
+let a = str.split("").reverse().join("")
+console.log(a)

@@ -10,15 +10,14 @@
 
 function myClone(obj) {
     const newObj = {}
-   let k =  Object.keys(obj).forEach((value,index)=>{
+  Object.keys(obj).forEach((value,index)=>{
         if(typeof obj[value] === "object" && !Array.isArray(obj[value]) && obj[value] !== null){
             newObj[value] = myClone(obj[value])
             return myClone(obj[value])
         }
         newObj[value] = obj[value]
     })
-    return newObj
-    
+    return newObj  
 }
 
 
@@ -38,3 +37,11 @@ console.log('f',f)
 console.log('o',o)
 console.log(typeof myClone)
 
+// const deepCopy = (obj) =>{
+//     const newObj = {}
+//     for (let index = 0; index < obj.length; index++) {
+        
+        
+//     }
+
+// }
